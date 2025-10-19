@@ -19,6 +19,7 @@ return {
       local capabilities = require('blink.cmp').get_lsp_capabilities()
       require("lspconfig").lua_ls.setup { capabilities = capabilities }
       require("lspconfig").gopls.setup { capabilities = capabilities }
+      require("lspconfig").vtsls.setup { capabilities = capabilities }
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
@@ -37,6 +38,7 @@ return {
       })
 
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+      vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename)
     end
   }
 }

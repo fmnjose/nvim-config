@@ -5,3 +5,11 @@ indent_size = 2
 [*.go]
 indent_style = space
 indent_size = 2
+
+[*.tsx]
+ident_style = spaces
+ident_size = 2
+
+[*.ts]
+ident_style = spaces
+ident_size = 2
